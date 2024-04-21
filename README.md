@@ -3,7 +3,7 @@ An AI based conveyor system that utilizes image recognition capabilities to segr
 
 ### Team Members
 [1.Sarath Madhav](https://github.com/Pseudozoid)   
-[2.Rishi Krishna ](https://github.com/Rishi-ks)   
+[2.Rishi Krishna ](https://github.com/Rishi-k-s)   
 [3.Roshan Cyriac](https://github.com/RoshanCy85)   
 [4.Vishnu Rajagopal](https://github.com/Vishnudrm)   
 

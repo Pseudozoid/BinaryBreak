@@ -1,6 +1,14 @@
+// #include <DHT.h>
+// #define DHTPIN 7 
+// #define DHTTYPE DHT11  
+int gasInput = A0;
+
+// DHT dht (DHTPIN, DHTTYPE);
+
 void setup() {
   Serial.begin(9600);
-  pinMode(BUILTIN_LED, OUTPUT);
+  pinMode(gasInput, INPUT);
+  // dht.begin();
 
 }
 
@@ -16,6 +24,9 @@ void loop() {
       digitalWrite(BUILTIN_LED,HIGH);
     }
   }
+  Serial.println( analogRead(gasInput) );
+  delay(500);
+ 
 
 }
 
