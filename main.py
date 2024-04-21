@@ -7,12 +7,14 @@ model = project.version(3).model
 # infer on a local image
 json_response = model.predict("./syringe.jpg", confidence=40, overlap=30).json()
 
+threshold = 0.8
+for prediction in json_response["predictions"]:
+    if prediction["confidence"] > threshold:
+        # Do something specific
+        print("Syringe detected!")
+        break;
+
 # save the JSON response to a file
 with open('output.json', 'w') as f:
     json.dump(json_response, f)
 
-# visualize your prediction
-# model.predict("your_image.jpg", confidence=40, overlap=30).save("prediction.jpg")
-
-# infer on an image hosted elsewhere
-# print(model.predict("URL_OF_YOUR_IMAGE", hosted=True, confidence=40, overlap=30).json())
