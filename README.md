@@ -25,9 +25,9 @@ DHT11 and MQ02 sensors
 
 ### How to Run
 * In main.py 
-    json_response = model.predict("./syringe.jpg", confidence=40, overlap=30).json()
+    json_response = model.predict("./image.jpg", confidence=40, overlap=30).json()
 
-  replace "./syringe.jpg" with the path to your image
+  replace "./image.jpg" with the path to your image
 * Run python main.py
 * If a defined contaminant is detected with sufficient confidence, the coordinates of the contaminant and other details are exported to output.json
 
