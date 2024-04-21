@@ -8,20 +8,29 @@ An AI based conveyor system that utilizes image recognition capabilities to segr
 [4.Vishnu Rajagopal](https://github.com/Vishnudrm)   
 
 ### Link to Project
-[Embed the live link of project](live_link)
+[GitHub](https://github.com/Pseudozoid/BinaryBreak)
 
 ### How it Works ?
-Explaining the working of project  
-Embed video of project demo
+The project utilises image detection capabilites provided by the Roboflow 3.0 Object Detection model from RoboFlow. The model was trained on a custom dataset. Bio-medical wastes are placed on a conveyor belt that is monitored by a camera. Upon detection of the class of contaminant (sharps, organic-waste, fluid .. etc) a partition pushes the object into it's appropriate labelled bin and updates the count to keep track of the amount and type of waste generated. Temperature and humidity sensors in the room continuously monitor environment for ensuring safe working conditions.
 
 ### Technologies used
-List out tech stacks you have used
+Roboflow 3.0 Object Detection Model
+Python
+ESP8266
+DHT11 and MQ02 sensors
 
 ### How to configure
-Instructions for setting up project
+* Clone this repository to your local machine.
+* Run pip install -r requirements.txt (use virtual environment if necessary)
 
 ### How to Run
-Instructions for running
+* In main.py 
+    json_response = model.predict("./syringe.jpg", confidence=40, overlap=30).json()
+
+  replace "./syringe.jpg" with the path to your image
+* Run python main.py
+* If a defined contaminant is detected with sufficient confidence, the coordinates of the contaminant and other details are exported to output.json
 
 ### Other Links
-Provide any other links ( for eg. Wireframe , UI, Abstract, Presentation )
+
+[Slides](https://docs.google.com/presentation/d/1NSZxJNRLEPfxkWvTta22ScGc9xkjkmOqKzJrUhBBciM/edit?usp=sharing)

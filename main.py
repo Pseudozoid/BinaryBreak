@@ -10,7 +10,7 @@ rf = Roboflow(api_key="otKMUXAELXaU2XZsT77M")
 project = rf.workspace().project("biomedical-wastes")
 model = project.version(3).model
 
-json_response = model.predict("./syringe.jpg", confidence=40, overlap=30).json()
+json_response = model.predict("./image.jpg", confidence=40, overlap=30).json()
 
 portsList = []
 # portvar = ""
